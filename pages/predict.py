@@ -1,13 +1,25 @@
 import streamlit as st
 from dashboard import Dashboard
 import pandas as pd
-import pycaret
+from pycaret.classification import *
+from datetime import datetime
 
 # Create a function to run the prediction Streamlit app
 def run_prediction_app():
+    
+    sd = st.sidebar
+    sd.image("assets/logo.png", width='100%', use_column_width=True)
+
     st.title("Prediction Page")
     data = get_user_input()
-    st.write(data[0])
+    clf = setup(data=data, target='timestamp')
+
+
+    data["timestamp"] = data["timestamp"].astype(str)
+    
+    data["timestamp"] = pd.to_datetime(data["timestamp"], unit='s')
+    st.write(data)
+    
     cal_button = st.button("Predict")
 
 

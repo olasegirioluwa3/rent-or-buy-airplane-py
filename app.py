@@ -71,6 +71,7 @@ def add_to_raw(raw):
 
 
 def main_stack(csv_file):
+
     # ds = new Dashboard
     # Initialize an empty dictionary to store the data
     data_dict = {}
@@ -83,6 +84,7 @@ def main_stack(csv_file):
         data_dict = dict(zip(header, data))
 
 
+    
     st.title("RENT OR BUY CALCULATOR")
     sd = st.sidebar
 
@@ -173,7 +175,7 @@ def main():
 
     st.title("RENT OR BUY CALCULATOR")
     sd = st.sidebar
-
+    
     data = {}
     sd.title("INPUT")
     sd.subheader("Operating Costs | Variable")
@@ -249,15 +251,11 @@ def main():
 
 
 if __name__ == "__main__":
-# def intro():
-    # st.sidebar.title("NAVIGATION")
-    # navigation = st.sidebar.radio("Choose an option:", ["Home", "Predict"])
-
-    # if navigation == "Home":
-        # show_home_page()
-
-        # show_home_page()
-        # Define the CSV file name
+    
+    sd = st.sidebar
+    sd.image("assets/logo.png", width='100%', use_column_width=True)
+    
+    # Define the CSV file name
     csv_file = "data.csv"
 
     # Check if the CSV file exists
