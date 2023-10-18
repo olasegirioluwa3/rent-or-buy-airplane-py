@@ -1,1 +1,5 @@
 __pycache__
+model_trainer.py
+fullraw.csv
+logs.log
+data.csv
