@@ -71,7 +71,17 @@ def add_to_raw(raw):
 
 
 def main_stack(csv_file):
-
+    # Define the CSS for the background image
+    css = """
+    <style>
+    body {
+        background-image: url('assets/logo.png');
+        background-size: cover;
+    }
+    </style>
+    """
+    # Write the CSS to the Streamlit page
+    st.markdown(css, unsafe_allow_html=True)
     # ds = new Dashboard
     # Initialize an empty dictionary to store the data
     data_dict = {}
@@ -82,7 +92,6 @@ def main_stack(csv_file):
         header = next(reader)  # Read the header row
         data = next(reader)    # Read the data row
         data_dict = dict(zip(header, data))
-
 
     
     st.title("RENT OR BUY CALCULATOR")
@@ -171,6 +180,17 @@ def main_stack(csv_file):
 
 
 def main():
+    # Define the CSS for the background image
+    css = """
+    <style>
+    body {
+        background-image: url('assets/logo.png');
+        background-size: cover;
+    }
+    </style>
+    """
+    # Write the CSS to the Streamlit page
+    st.markdown(css, unsafe_allow_html=True)
     # pass
 
     st.title("RENT OR BUY CALCULATOR")
@@ -251,7 +271,18 @@ def main():
 
 
 if __name__ == "__main__":
-    
+    # Define the CSS for the background image
+    css = """
+    <style>
+    body {
+        background-image: url('assets/logo.png');
+        background-size: cover;
+    }
+    </style>
+    """
+    # Write the CSS to the Streamlit page
+    st.markdown(css, unsafe_allow_html=True)
+
     sd = st.sidebar
     sd.image("assets/logo.png", width='100%', use_column_width=True)
     
