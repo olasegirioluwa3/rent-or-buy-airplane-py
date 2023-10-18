@@ -1,7 +1,6 @@
 import streamlit as st
 from dashboard import Dashboard
 import pandas as pd
-from pycaret.classification import *
 from datetime import datetime
 
 # Create a function to run the prediction Streamlit app
